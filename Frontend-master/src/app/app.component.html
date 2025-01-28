@@ -1,0 +1,7 @@
+<!-- app.component.html -->
+<button mat-raised-button color="warn" (click)="goToPoliticsEdit()" *ngIf="showButton">Gestor de Políticas</button>
+<button mat-raised-button color="warn" (click)="goToCookiesEdit()" *ngIf="showButton">Gestor de Cookies</button>
+  <app-cookies-banner *ngIf="showCookieBanner"></app-cookies-banner>
+    <!-- Contenedor donde se renderizan las vistas de los componentes según las rutas -->
+  <router-outlet></router-outlet>
+  
