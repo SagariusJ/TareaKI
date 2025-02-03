@@ -76,7 +76,7 @@ namespace Backend.Controllers
             return NoContent();
         }
 
-        [HttpPut("update-status/{id}")]
+        [HttpPut("update-cookie-full/{id}")]
         public async Task<IActionResult> PutCookieFull(int id, Cookie cookie)
         {
             if (id != cookie.Id)
