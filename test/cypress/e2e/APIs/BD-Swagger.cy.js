@@ -140,6 +140,11 @@ describe('API Testing', () => {
         cy.get(':nth-child(1) > .responses-table > tbody > .response > .response-col_status').should('include.text', '404');
       });
     })
-    
+    it('GET/api/Politics', () => {
+      cy.get('#operations-tag-Cookies > .expand-operation').click();
+      cy.get('#operations-tag-Politics > .expand-operation').click();
+    })
   });
+
+
 })
