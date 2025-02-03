@@ -1,0 +1,14 @@
+services:
+        cypress_compose:
+                build:
+                        context: ./
+                        dockerfile: Dockerfile
+                volumes:
+                        - ./dockerReports:/app/cypress/reports
+        
+        webReports:
+                image: nginx:stable-alpine3.20-perl
+                ports:
+                        - "8080:80"
+                volumes:
+                        - ./cypress/reports:/usr/share/nginx/html
