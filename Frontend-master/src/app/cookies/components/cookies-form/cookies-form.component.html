@@ -22,17 +22,11 @@
       <div class="checkbox-item">
         <mat-label>Accepted?</mat-label>
         <mat-checkbox formControlName="accepted"></mat-checkbox>
-        <mat-error *ngIf="cookieForm.get('accepted')?.invalid">
-          Accepted is obligatory.
-        </mat-error>
       </div>
 
       <div class="checkbox-item">
         <mat-label>Required?</mat-label>
         <mat-checkbox formControlName="required"></mat-checkbox>
-        <mat-error *ngIf="cookieForm.get('required')?.invalid">
-          Required is obligatory.
-        </mat-error>
       </div>
     </div>
 
