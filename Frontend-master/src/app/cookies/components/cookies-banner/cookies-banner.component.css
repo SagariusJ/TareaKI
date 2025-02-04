@@ -17,11 +17,15 @@
 
   /* Visibilidad */
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+  pointer-events: none; /* Evita interacciones cuando está oculto */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-  /* Clase para mostrar el banner */
+  /* Mostrar el banner */
   &.visible {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Permitir interacciones cuando está visible */
   }
 
   .cookie-content {
