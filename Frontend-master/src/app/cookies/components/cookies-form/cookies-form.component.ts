@@ -33,8 +33,8 @@ export class CookiesFormComponent {
       id: [null],
       name: ['', [Validators.required, Validators.maxLength(100)]],
       description: ['',[Validators.required, Validators.maxLength(1000)]],
-      accepted: [''],
-      required: ['']
+      accepted: [false],
+      required: [false]
     });
 
     this.route.params.subscribe((params) => {
